@@ -5,7 +5,7 @@ import javax.swing.JButton;
 import XSDStitch.FanfictionDatabase.Util.BasicComponents;
 import XSDStitch.FanfictionDatabase.abstractClasses.AbstractCharacter;
 
-public class newCharacter extends AbstractCharacter {
+public class NewCharacter extends AbstractCharacter {
 
 	private JButton save;
 	private JButton close;
@@ -14,7 +14,7 @@ public class newCharacter extends AbstractCharacter {
 	private JButton addForm;
 	private JButton addItem;
 	
-	public newCharacter() {
+	public NewCharacter() {
 		characterPage.setVisible(true);
 	}
 

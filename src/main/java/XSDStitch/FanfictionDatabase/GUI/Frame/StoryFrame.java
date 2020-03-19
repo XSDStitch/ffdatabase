@@ -1,6 +1,4 @@
-package XSDStitch.FanfictionDatabase.GUI.addnew.incomplete;
-
-import java.awt.Component;
+package XSDStitch.FanfictionDatabase.GUI.Frame;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,6 +17,8 @@ import XSDStitch.FanfictionDatabase.Util.BasicComponents;
 public abstract class StoryFrame {
 	protected String columnsetting = "pref, 3dlu, pref:grow, 3dlu, pref:grow";
 	protected String rowSetting = "pref:grow, 3dlu, pref:grow, 3dlu, pref:grow, 3dlu, pref:grow, 3dlu, pref:grow, 3dlu, pref:grow, 3dlu, pref:grow, 3dlu, pref:grow";
+	protected String[] characterColumns = {"Name", "Role", "Status"};
+	protected String[] chapterColumns = {"Number", "Title", "State"};
 
 	protected CellConstraints cc = new CellConstraints();
 	protected FormLayout layout = new FormLayout(columnsetting, rowSetting);
@@ -34,6 +34,7 @@ public abstract class StoryFrame {
 	protected JButton addCharacter = new JButton("Add Character");
 	protected JTable characterTable;
 	protected JButton addChapter = new JButton("Add Chapter");
+	protected JTable chapterTable;
 	protected JLabel picture;
 	protected JLabel sequel = new JLabel("Sequel");
 	protected JTextField sequelText = BasicComponents.textfield();
@@ -77,6 +78,16 @@ public abstract class StoryFrame {
 		container.setBorder(Borders.DLU2);
 
 		return container;
+	}
+	
+	protected void setCharacterTable(String[][] rowData) {
+		characterTable = new JTable(rowData, characterColumns);
+		baseStoryPanel.add(characterTable, cc.xywh(5, 7, 1, 3));
+	}
+	
+	protected void setChapterTable(String[][] rowData) {
+		chapterTable = new JTable(rowData, chapterColumns);
+		
 	}
 
 }

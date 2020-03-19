@@ -66,7 +66,8 @@ public class Person {
 		personPanel.add(website, cc.xy(1, 3));
 		personPanel.add(websiteLInk, cc.xy(3, 3));
 
-		personFrame.add(setPicture(), cc.xywh(5, 1, 1, 3));
+		// personFrame.add(setPicture(), cc.xywh(5, 1, 1, 3)); Don't understand error at
+		// this time
 
 		personPanel.add(close, cc.xyw(1, 5, 3, "center, center"));
 	}

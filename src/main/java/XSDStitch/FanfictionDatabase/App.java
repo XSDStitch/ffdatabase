@@ -13,7 +13,8 @@ import XSDStitch.FanfictionDatabase.GUI.addnew.AddChapter;
 import XSDStitch.FanfictionDatabase.GUI.addnew.AddCharacterToStory;
 import XSDStitch.FanfictionDatabase.GUI.addnew.NewEditStoryIdea;
 import XSDStitch.FanfictionDatabase.GUI.addnew.NewFranchise;
-import XSDStitch.FanfictionDatabase.GUI.addnew.incomplete.StoryFrame;
+import XSDStitch.FanfictionDatabase.GUI.addnew.NewItem;
+import XSDStitch.FanfictionDatabase.GUI.addnew.NewCharacter;
 
 /**
  * Hello world!
@@ -22,6 +23,11 @@ import XSDStitch.FanfictionDatabase.GUI.addnew.incomplete.StoryFrame;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
+		//workingScreens();
+	}
+
+	private static void workingScreens() {
+		new NewItem();
 		new AddChapter();
 		new AddCharacterToStory();
 		new FranchiseSortedList("Character List");
@@ -35,8 +41,9 @@ public class App {
 		new NewFranchise();
 		new SingleItem();
 		new PictureList();
-		new Person();
 		new Picture();
-		new StoryFrame();
+		new Person();
+		new OCharacter();
+		new NewCharacter();
 	}
 }
